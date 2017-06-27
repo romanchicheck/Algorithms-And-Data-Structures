@@ -1,7 +1,17 @@
 package com.pandazilla.data_strutures;
 
-/**
- * Created by rnovikov on 6/24/17.
- */
-public class Stack {
+import com.pandazilla.data_strutures.exceptions.StackEmptyException;
+
+public interface Stack {
+
+    int size();
+
+    boolean isEmpty();
+
+    void pop() throws StackEmptyException;
+
+    void push(Object element);
+
+    Object top() throws StackEmptyException;
+
 }
