@@ -1,4 +1,4 @@
-package com.pandazilla.data_strutures.exceptions;
+package com.pandazilla.datastrutures.exceptions;
 
 public class StackFullException extends RuntimeException {
 

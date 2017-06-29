@@ -1,7 +1,7 @@
-package com.pandazilla.data_strutures;
+package com.pandazilla.datastrutures;
 
-import com.pandazilla.data_strutures.exceptions.StackEmptyException;
-import com.pandazilla.data_strutures.exceptions.StackFullException;
+import com.pandazilla.datastrutures.exceptions.StackEmptyException;
+import com.pandazilla.datastrutures.exceptions.StackFullException;
 
 public class ArrayStack implements Stack{
 
