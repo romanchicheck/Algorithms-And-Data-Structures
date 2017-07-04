@@ -28,6 +28,15 @@ public class ArrayQueue implements Queue {
     }
 
     @Override
+    public boolean isFull() {
+        if (rear == capacity - 1) {
+            return true;
+        } else
+            return false;
+
+    }
+
+    @Override
     public Object front() throws QueueEmptyException {
         if (isEmpty()) {
             throw new QueueEmptyException("The Queue is empty");

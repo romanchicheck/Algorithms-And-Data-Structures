@@ -17,6 +17,13 @@ public interface Queue {
     boolean isEmpty();
 
     /**
+     * check if queue is full
+     *
+     * @return true if queue is full or false if queue is not full
+     */
+    boolean isFull();
+
+    /**
      * check first element in queue
      *
      * @return front element of queue
