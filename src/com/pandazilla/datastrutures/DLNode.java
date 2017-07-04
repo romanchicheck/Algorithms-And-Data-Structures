@@ -5,10 +5,12 @@ public class DLNode {
     private Object element;
     private DLNode next, prev;
 
-    public DLNode(Object element, DLNode next, DLNode prev) {
+    public DLNode() {}
+
+    public DLNode(Object element, DLNode prev, DLNode next) {
         this.element = element;
-        this.next = next;
         this.prev = prev;
+        this.next = next;
     }
 
     public Object getElement() {

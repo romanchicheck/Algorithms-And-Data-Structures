@@ -1,6 +1,7 @@
 package com.pandazilla.datastrutures;
 
 import com.pandazilla.datastrutures.exceptions.QueueEmptyException;
+import com.sun.xml.internal.bind.v2.TODO;
 
 public class LinkedQueue implements Queue{
 
@@ -19,15 +20,15 @@ public class LinkedQueue implements Queue{
     @Override
     public boolean isEmpty() {
         return false;
-    }
+    } //TODO implement it
 
     @Override
     public boolean isFull() {
         return false;
-    }
+    } //TODO implement it
 
     @Override
-    public Object front() throws QueueEmptyException {
+    public Object front() throws QueueEmptyException { //TODO implement it
         return null;
     }
 
