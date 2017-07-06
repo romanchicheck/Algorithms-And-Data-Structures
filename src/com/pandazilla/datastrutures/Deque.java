@@ -1,5 +1,7 @@
 package com.pandazilla.datastrutures;
 
+import com.pandazilla.datastrutures.exceptions.DequeEmptyException;
+
 public interface Deque {
 
     int size();
@@ -8,7 +10,7 @@ public interface Deque {
 
     Object first();
 
-    Object last();
+    Object last() throws DequeEmptyException;
 
     void insertFirst(Object element);
 
