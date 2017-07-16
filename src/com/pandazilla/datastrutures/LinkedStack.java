@@ -13,7 +13,7 @@ public class LinkedStack implements Stack {
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
