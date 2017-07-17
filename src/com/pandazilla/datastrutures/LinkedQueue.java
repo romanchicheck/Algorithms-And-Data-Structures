@@ -33,7 +33,7 @@ public class LinkedQueue implements Queue{
     }
 
     @Override
-    public void enqueue(Object element) {
+    public void insert(Object element) {
         Node node = new Node(null, element);
         if (size == 0) {
             head = node;
@@ -45,7 +45,7 @@ public class LinkedQueue implements Queue{
     }
 
     @Override
-    public Object dequeue() throws QueueEmptyException {
+    public Object remove() throws QueueEmptyException {
         if (size == 0) {
             throw new QueueEmptyException("Queue is empty");
         }

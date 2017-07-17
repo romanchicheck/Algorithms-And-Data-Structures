@@ -3,6 +3,9 @@ package com.pandazilla.datastrutures;
 import com.pandazilla.datastrutures.exceptions.QueueEmptyException;
 import com.pandazilla.datastrutures.exceptions.QueueFullException;
 
+/**
+ * Queue implementation based on array
+ */
 public class ArrayQueue implements Queue {
 
     private int capacity;
@@ -29,11 +32,7 @@ public class ArrayQueue implements Queue {
 
     @Override
     public boolean isFull() {
-        if (rear == capacity - 1) {
-            return true;
-        } else
-            return false;
-
+        return rear == capacity - 1;
     }
 
     @Override
@@ -45,16 +44,18 @@ public class ArrayQueue implements Queue {
     }
 
     @Override
-    public void enqueue(Object element) {
-        if (size() == capacity - 1) {
+    public void insert(Object element) {
+        if (size() == capacity) {
             throw new QueueFullException("The queue is full!");
         }
+        System.out.print("rearBefore: " + rear+ " ");
         elements[rear] = element;
-        rear = (rear + 1) % capacity;
+        rear = (rear + 1) % capacity;//1 - 1, 2 - 2, 3 - 3, 4-4, 5 - 5, 6-6, 7-7, 8-8, 9-9,
+        System.out.println("rearAfter: " + rear+ " element: " + element + '\n');
     }
 
     @Override
-    public Object dequeue() throws QueueEmptyException {
+    public Object remove() throws QueueEmptyException {
         if (isEmpty()) {
             throw new QueueEmptyException("The Queue is empty");
         }
@@ -63,4 +64,17 @@ public class ArrayQueue implements Queue {
         front = (front + 1) % capacity;
         return temp;
     }
+
+    public void clearQueue() {
+        while(isEmpty()) {
+            remove();
+        }
+    }
+
+    public void printQueue() {
+        for (Object obj : elements) {
+            System.out.print(obj + " ");
+        }
+    }
+
 }

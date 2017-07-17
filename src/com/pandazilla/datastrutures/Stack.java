@@ -18,6 +18,12 @@ public interface Stack {
     boolean isEmpty();
 
     /**
+     * check if stack is full
+     * @return true if stack is full or false if not full
+     */
+    boolean isFull();
+
+    /**
      * remove the last element of stack
      *
      * @return the removed element
@@ -37,6 +43,6 @@ public interface Stack {
      * @return last element
      * @throws StackEmptyException if stack is empty
      */
-    Object top() throws StackEmptyException;
+    Object peek() throws StackEmptyException;
 
 }

@@ -3,7 +3,11 @@ package com.pandazilla.datastrutures;
 import com.pandazilla.datastrutures.exceptions.StackEmptyException;
 import com.pandazilla.datastrutures.exceptions.StackFullException;
 
-public class ArrayStack implements Stack{
+/**
+ * Stack implementation based on array
+ */
+
+public class ArrayStack implements Stack {
 
     //capacity of array
     private int capacity;
@@ -30,28 +34,45 @@ public class ArrayStack implements Stack{
     }
 
     @Override
+    public boolean isFull() {
+        return top == capacity - 1;
+    }
+
+    @Override
     public Object pop() throws StackEmptyException {
         if (isEmpty()) {
             throw new StackEmptyException("Stack is empty!");
         }
         Object element = elements[top];
-        elements[top--] = null; //garbage collector will remove elements[top]
+        elements[top--] = null; //garbage collector will remove elements[peek]
         return element;
     }
 
     @Override
-    public void push(Object element) throws StackFullException{
-        if (size() == capacity) {
+    public void push(Object element) throws StackFullException {
+        if (isFull()) {
             throw new StackFullException("Stack overflow!");
         }
         elements[++top] = element;
     }
 
     @Override
-    public Object top() throws StackEmptyException {
+    public Object peek() throws StackEmptyException {
         if (isEmpty()) {
             throw new StackFullException("Stack is empty!");
         }
         return elements[top];
+    }
+
+    public void clearStack() {
+        while (!isEmpty()) {
+            pop();
+        }
+    }
+
+    public void printStack() {
+        for (Object obj : elements) {
+            System.out.print("Value: " + obj + " ");
+        }
     }
 }

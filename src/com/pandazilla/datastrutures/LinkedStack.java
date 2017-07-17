@@ -25,6 +25,11 @@ public class LinkedStack implements Stack {
     }
 
     @Override
+    public boolean isFull() {
+        return false;
+    }
+
+    @Override
     public Object pop() throws StackEmptyException {
         if (isEmpty()) {
             throw new StackEmptyException("Stack is empty");
@@ -43,7 +48,7 @@ public class LinkedStack implements Stack {
     }
 
     @Override
-    public Object top() throws StackEmptyException {
+    public Object peek() throws StackEmptyException {
         if (isEmpty()) {
             throw new StackEmptyException("Stack is empty");
         }

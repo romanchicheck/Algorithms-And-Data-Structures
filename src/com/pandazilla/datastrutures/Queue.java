@@ -24,7 +24,7 @@ public interface Queue {
     boolean isFull();
 
     /**
-     * check first element in queue
+     * read first element in queue
      *
      * @return front element of queue
      * @throws QueueEmptyException if queue is empty
@@ -36,7 +36,7 @@ public interface Queue {
      *
      * @param element which will be added
      */
-    void enqueue(Object element);
+    void insert(Object element);
 
     /**
      * remove element from queue
@@ -44,5 +44,5 @@ public interface Queue {
      * @return deleted element
      * @throws QueueEmptyException if queue is empty
      */
-    Object dequeue() throws QueueEmptyException;
+    Object remove() throws QueueEmptyException;
 }

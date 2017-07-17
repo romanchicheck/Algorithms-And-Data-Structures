@@ -37,12 +37,12 @@ public class DequeQueue implements Queue {
     }
 
     @Override
-    public void enqueue(Object element) {
+    public void insert(Object element) {
         deque.insertFirst(element);
     }
 
     @Override
-    public Object dequeue() throws QueueEmptyException {
+    public Object remove() throws QueueEmptyException {
         try {
             return deque.removeFirst();
         } catch (DequeEmptyException e) {
