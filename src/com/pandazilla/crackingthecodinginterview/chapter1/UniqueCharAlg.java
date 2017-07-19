@@ -1,4 +1,4 @@
-package com.pandazilla.crackingthecodinginterview.chapterone;
+package com.pandazilla.crackingthecodinginterview.chapter1;
 
 import java.util.HashSet;
 
