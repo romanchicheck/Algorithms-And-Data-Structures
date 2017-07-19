@@ -24,6 +24,6 @@ public class ChapterOne {
         System.out.print("Input your second string: ");
         String str2 = scanner.nextLine();
         StringPermutation permutation = new StringPermutation();
-        System.out.println("Result: " + permutation.isPermutation4(str1, str2));
+        System.out.println("Result: " + permutation.isPermutation(str1, str2));
     }
 }
