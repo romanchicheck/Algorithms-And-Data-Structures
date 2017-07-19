@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class ChapterOne {
 
     public static void main(String[] args) {
-        testUniqueCharAlg();
-        testStringPermutation();
+        //testUniqueCharAlg();
+        //testStringPermutation();
+        replaceAllSpaces();
     }
 
     public static void testUniqueCharAlg() {
@@ -25,5 +26,15 @@ public class ChapterOne {
         String str2 = scanner.nextLine();
         StringPermutation permutation = new StringPermutation();
         System.out.println("Result: " + permutation.isPermutation(str1, str2));
+    }
+
+    public static void replaceAllSpaces() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input your string: ");
+        String str = scanner.nextLine();
+        System.out.print("Input the real string length: ");
+        int length = scanner.nextInt();
+        ReplaceAllSpaces replaceAllSpaces = new ReplaceAllSpaces();
+        System.out.print("Result: " + replaceAllSpaces.replaceAllSpaces(str, length));
     }
 }
