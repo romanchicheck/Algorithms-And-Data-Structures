@@ -7,7 +7,8 @@ public class ChapterOne {
     public static void main(String[] args) {
         //testUniqueCharAlg();
         //testStringPermutation();
-        replaceAllSpaces();
+        //replaceAllSpaces();
+        palindromePermutation();
     }
 
     public static void testUniqueCharAlg() {
@@ -36,5 +37,13 @@ public class ChapterOne {
         int length = scanner.nextInt();
         ReplaceAllSpaces replaceAllSpaces = new ReplaceAllSpaces();
         System.out.print("Result: " + replaceAllSpaces.replaceAllSpaces(str, length));
+    }
+
+    public static void palindromePermutation() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your palindrome: ");
+        String palindrome = scanner.nextLine();
+        PalindromePermutation palindromePermutation = new PalindromePermutation();
+        System.out.println("Result: " + palindromePermutation.isPalindromePermutation(palindrome));
     }
 }
