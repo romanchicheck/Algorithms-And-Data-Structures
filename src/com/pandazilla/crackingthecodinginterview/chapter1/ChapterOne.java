@@ -8,7 +8,8 @@ public class ChapterOne {
         //testUniqueCharAlg();
         //testStringPermutation();
         //replaceAllSpaces();
-        palindromePermutation();
+        //palindromePermutation();
+        oneAway();
     }
 
     public static void testUniqueCharAlg() {
@@ -45,5 +46,15 @@ public class ChapterOne {
         String palindrome = scanner.nextLine();
         PalindromePermutation palindromePermutation = new PalindromePermutation();
         System.out.println("Result: " + palindromePermutation.isPalindromePermutation(palindrome));
+    }
+
+    public static void oneAway() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your existing string: ");
+        String existing = scanner.nextLine();
+        System.out.println("Enter string which is modified: ");
+        String modified = scanner.nextLine();
+        OneAway oneAway = new OneAway();
+        System.out.println("Result: " + oneAway.isStringModified(existing, modified));
     }
 }
