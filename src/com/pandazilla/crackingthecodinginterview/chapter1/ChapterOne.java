@@ -9,7 +9,8 @@ public class ChapterOne {
         //testStringPermutation();
         //replaceAllSpaces();
         //palindromePermutation();
-        oneAway();
+        //oneAway();
+        compression();
     }
 
     public static void testUniqueCharAlg() {
@@ -56,5 +57,13 @@ public class ChapterOne {
         String modified = scanner.nextLine();
         OneAway oneAway = new OneAway();
         System.out.println("Result: " + oneAway.isStringModified(existing, modified));
+    }
+
+    public static void compression() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your string: ");
+        String str = scanner.nextLine();
+        StringCompression compression = new StringCompression();
+        System.out.println("Result: " + compression.compression(str));
     }
 }
