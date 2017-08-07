@@ -10,7 +10,11 @@ public class ChapterOne {
         //replaceAllSpaces();
         //palindromePermutation();
         //oneAway();
-        compression();
+        //compression();
+        //solution("00-44  48 5555 8361");
+        //solution("0 - 22 1985--324");
+        //solution("555372654");
+        rotateMatrix();
     }
 
     public static void testUniqueCharAlg() {
@@ -65,5 +69,42 @@ public class ChapterOne {
         String str = scanner.nextLine();
         StringCompression compression = new StringCompression();
         System.out.println("Result: " + compression.compression(str));
+    }
+
+    public static void rotateMatrix() {
+        int[][]array = {
+                {1,2,3},{4,5,6},{7,8,9}
+        };
+        RotateMatrix rotateMatrix = new RotateMatrix(array);
+        rotateMatrix.rotateMatrix();
+    }
+
+    public static String solution(String str) {
+        StringBuilder stringBuilder = new StringBuilder();
+        if (!str.isEmpty() && str.length() >= 2) {
+            String result = str.replaceAll("\\s", "").replaceAll("-", "");
+            int start = 0;
+            int end = 3;
+            int groupCount = result.length() / 3;
+            int remainder = result.length() - (groupCount * 3);
+            if (remainder == 1) {
+                groupCount--;
+            }
+            for (int i = 0; i < groupCount; i++) {
+                if (remainder == 0 && i == groupCount - 1) {
+                    stringBuilder.append(result.substring(start, end));
+                } else {
+                    stringBuilder.append(result.substring(start, end)).append("-");
+                }
+                start += 3;
+                end += 3;
+            }
+            if (remainder == 1) {
+                stringBuilder.append(result.substring(start, start+2)).append("-").append(result.substring(end-1, end+1));
+            } else {
+                stringBuilder.append(result.substring(start));
+            }
+        }
+        return stringBuilder.toString();
     }
 }
