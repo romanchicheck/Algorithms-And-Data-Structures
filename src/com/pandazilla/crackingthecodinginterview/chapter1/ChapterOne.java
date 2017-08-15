@@ -11,10 +11,9 @@ public class ChapterOne {
         //palindromePermutation();
         //oneAway();
         //compression();
-        //solution("00-44  48 5555 8361");
-        //solution("0 - 22 1985--324");
-        //solution("555372654");
-        rotateMatrix();
+        //rotateMatrix();
+        //setMatrixToZero();
+        //stringRotation();
     }
 
     public static void testUniqueCharAlg() {
@@ -72,39 +71,32 @@ public class ChapterOne {
     }
 
     public static void rotateMatrix() {
-        int[][]array = {
-                {1,2,3},{4,5,6},{7,8,9}
+        int[][] array = {
+                {1, 2, 3}, {4, 5, 6}, {7, 8, 9}
         };
         RotateMatrix rotateMatrix = new RotateMatrix(array);
         rotateMatrix.rotateMatrix();
     }
 
-    public static String solution(String str) {
-        StringBuilder stringBuilder = new StringBuilder();
-        if (!str.isEmpty() && str.length() >= 2) {
-            String result = str.replaceAll("\\s", "").replaceAll("-", "");
-            int start = 0;
-            int end = 3;
-            int groupCount = result.length() / 3;
-            int remainder = result.length() - (groupCount * 3);
-            if (remainder == 1) {
-                groupCount--;
-            }
-            for (int i = 0; i < groupCount; i++) {
-                if (remainder == 0 && i == groupCount - 1) {
-                    stringBuilder.append(result.substring(start, end));
-                } else {
-                    stringBuilder.append(result.substring(start, end)).append("-");
-                }
-                start += 3;
-                end += 3;
-            }
-            if (remainder == 1) {
-                stringBuilder.append(result.substring(start, start+2)).append("-").append(result.substring(end-1, end+1));
-            } else {
-                stringBuilder.append(result.substring(start));
-            }
-        }
-        return stringBuilder.toString();
+    public static void setMatrixToZero() {
+        int[][] array = {
+                {1, 2, 3, 8},
+                {4, 0, 5, 9},
+                {1, 1, 0, 5},
+                {3, 8, 9, 7},
+                {0, 3, 6, 7}};
+        ZeroMatrix zeroMatrix = new ZeroMatrix(array);
+        zeroMatrix.setToZero();
     }
+
+    public static void stringRotation() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your string: ");
+        String rotatedStr = scanner.nextLine();
+        System.out.println("Enter your next string: ");
+        String existingStr = scanner.nextLine();
+        StringRotation stringRotation = new StringRotation();
+        System.out.println("Result is: " + stringRotation.isSubString(rotatedStr, existingStr));
+    }
+
 }
