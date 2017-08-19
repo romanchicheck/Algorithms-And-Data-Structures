@@ -1,28 +1,28 @@
 package com.pandazilla.datastrutures;
 
-public class Node {
+public class Node<T> {
 
-    private Node next;
-    private Object element;
+    private Node<T> next;
+    private T element;
 
-    public Node(Node next, Object element) {
+    public Node(Node<T> next, T element) {
         this.next = next;
         this.element = element;
     }
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 
-    public Object getElement() {
+    public T getElement() {
         return element;
     }
 
-    public void setElement(Object element) {
+    public void setElement(T element) {
         this.element = element;
     }
 }
