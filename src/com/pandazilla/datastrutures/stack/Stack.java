@@ -1,9 +1,9 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.stack;
 
 import com.pandazilla.datastrutures.exceptions.StackEmptyException;
 import com.pandazilla.datastrutures.exceptions.StackFullException;
 
-public interface Stack {
+public interface Stack<T> {
 
     /**
      * @return the size of stack
@@ -29,7 +29,7 @@ public interface Stack {
      * @return the removed element
      * @throws StackEmptyException if stack is empty
      */
-    Object pop() throws StackEmptyException;
+    T pop() throws StackEmptyException;
 
     /**
      * add new element to stack
@@ -37,12 +37,12 @@ public interface Stack {
      * @param element which will be added
      * @throws StackFullException if stack is overflow
      */
-    void push(Object element) throws StackFullException;
+    void push(T element) throws StackFullException;
 
     /**
      * @return last element
      * @throws StackEmptyException if stack is empty
      */
-    Object peek() throws StackEmptyException;
+    T peek() throws StackEmptyException;
 
 }

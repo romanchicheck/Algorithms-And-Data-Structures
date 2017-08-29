@@ -1,6 +1,6 @@
 package com.pandazilla.main;
 
-import com.pandazilla.datastrutures.ArrayStack;
+import com.pandazilla.datastrutures.stack.ArrayStack;
 
 /**
  * Testing ArrayStack

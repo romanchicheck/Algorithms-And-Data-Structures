@@ -1,5 +1,6 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.deque;
 
+import com.pandazilla.datastrutures.queue.Queue;
 import com.pandazilla.datastrutures.exceptions.DequeEmptyException;
 import com.pandazilla.datastrutures.exceptions.QueueEmptyException;
 

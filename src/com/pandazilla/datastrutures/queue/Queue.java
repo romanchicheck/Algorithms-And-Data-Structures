@@ -1,8 +1,8 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.queue;
 
 import com.pandazilla.datastrutures.exceptions.QueueEmptyException;
 
-public interface Queue {
+public interface Queue<T> {
 
     /**
      * @return the size of queue
@@ -29,14 +29,14 @@ public interface Queue {
      * @return front element of queue
      * @throws QueueEmptyException if queue is empty
      */
-    Object front() throws QueueEmptyException;
+    T front() throws QueueEmptyException;
 
     /**
      * adding element to end of queue
      *
      * @param element which will be added
      */
-    void insert(Object element);
+    void insert(T element);
 
     /**
      * remove element from queue
@@ -44,5 +44,5 @@ public interface Queue {
      * @return deleted element
      * @throws QueueEmptyException if queue is empty
      */
-    Object remove() throws QueueEmptyException;
+    T remove() throws QueueEmptyException;
 }

@@ -1,15 +1,15 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.queue;
 
 import com.pandazilla.datastrutures.exceptions.QueueEmptyException;
-import com.sun.xml.internal.bind.v2.TODO;
+import com.pandazilla.datastrutures.list.LinkedList;
 
-public class LinkedQueue implements Queue{
+public class LinkedQueue<T> implements Queue {
 
     private int size;
-    private Node head;
-    private Node tail;
+    private LinkedList<T> list;
 
     public LinkedQueue() {
+        this.list = new LinkedList<>();
     }
 
     @Override
@@ -19,8 +19,8 @@ public class LinkedQueue implements Queue{
 
     @Override
     public boolean isEmpty() {
-        return false;
-    } //TODO implement it
+        return list.isEmpty();
+    }
 
     @Override
     public boolean isFull() {
@@ -34,13 +34,7 @@ public class LinkedQueue implements Queue{
 
     @Override
     public void insert(Object element) {
-        Node node = new Node(null, element);
-        if (size == 0) {
-            head = node;
-        } else {
-            tail.setNext(node);
-        }
-        tail = node;
+        list.insertLast(element);
         size++;
     }
 
@@ -49,12 +43,6 @@ public class LinkedQueue implements Queue{
         if (size == 0) {
             throw new QueueEmptyException("Queue is empty");
         }
-        Object element = head.getElement();
-        head = head.getNext();
-        size--;
-        if (size == 0) {
-            tail = null;
-        }
-        return element;
+        return list.deleteFirst();
     }
 }

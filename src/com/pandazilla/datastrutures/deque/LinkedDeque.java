@@ -1,6 +1,7 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.deque;
 
 import com.pandazilla.datastrutures.exceptions.DequeEmptyException;
+import com.pandazilla.datastrutures.list.DLNode;
 
 public class LinkedDeque implements Deque {
 
@@ -40,7 +41,9 @@ public class LinkedDeque implements Deque {
     @Override
     public void insertFirst(Object element) {
         DLNode second = header.getNext();
-        DLNode first = new DLNode(element, header, second);
+        DLNode first = new DLNode(element);
+        first.setPrev(header);
+        first.setNext(second);
         second.setPrev(first);
         header.setNext(first);
         size++;

@@ -1,12 +1,11 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.list;
 
 public class Node<T> {
 
-    private Node<T> next;
     private T element;
+    private Node<T> next;
 
-    public Node(Node<T> next, T element) {
-        this.next = next;
+    public Node(T element) {
         this.element = element;
     }
 

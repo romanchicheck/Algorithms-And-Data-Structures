@@ -1,4 +1,4 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.queue;
 
 import com.pandazilla.datastrutures.exceptions.QueueEmptyException;
 import com.pandazilla.datastrutures.exceptions.QueueFullException;

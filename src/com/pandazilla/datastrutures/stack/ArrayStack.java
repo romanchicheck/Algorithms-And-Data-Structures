@@ -1,4 +1,4 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.stack;
 
 import com.pandazilla.datastrutures.exceptions.StackEmptyException;
 import com.pandazilla.datastrutures.exceptions.StackFullException;

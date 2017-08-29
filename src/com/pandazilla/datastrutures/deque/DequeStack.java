@@ -1,8 +1,9 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.deque;
 
 import com.pandazilla.datastrutures.exceptions.DequeEmptyException;
 import com.pandazilla.datastrutures.exceptions.StackEmptyException;
 import com.pandazilla.datastrutures.exceptions.StackFullException;
+import com.pandazilla.datastrutures.stack.Stack;
 
 public class DequeStack implements Stack {
 

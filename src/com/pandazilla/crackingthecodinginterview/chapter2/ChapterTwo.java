@@ -1,7 +1,7 @@
 package com.pandazilla.crackingthecodinginterview.chapter2;
 
 import com.pandazilla.datastrutures.Item;
-import com.pandazilla.datastrutures.LinkedList;
+import com.pandazilla.datastrutures.list.LinkedList;
 
 public class ChapterTwo {
 

@@ -1,4 +1,4 @@
-package com.pandazilla.datastrutures;
+package com.pandazilla.datastrutures.list;
 
 public interface List<T> {
 
@@ -22,11 +22,25 @@ public interface List<T> {
     T getFirst();
 
     /**
+     * Get last node
+     * @return Node
+     */
+    T getLast();
+
+    /**
      * Add an item to list
      *
      * @param object
      */
     void insertFirst(T object);
+
+
+    /**
+     * Add an item to list
+     *
+     * @param object
+     */
+    void insertLast(T object);
 
     /**
      * Delete item from list
@@ -36,8 +50,17 @@ public interface List<T> {
     T deleteFirst();
 
     /**
-     * Display list items
+     * Find item in list by key
+     * @param key of item
+     * @return item which was found
      */
-    void displayList();
+    T find(Node<T> key);
+
+    /**
+     * Delete item by key
+     * @param key of item
+     * @return deleted item
+     */
+    T deleteByKey(Node<T> key);
 
 }

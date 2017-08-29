@@ -1,6 +1,6 @@
 package com.pandazilla.main;
 
-import com.pandazilla.datastrutures.ArrayQueue;
+import com.pandazilla.datastrutures.queue.ArrayQueue;
 
 /**
  * Testing ArrayQueue
