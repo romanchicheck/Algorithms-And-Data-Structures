@@ -82,17 +82,16 @@ public class FirstLastLinkedList<T> implements FLList{
         while (current != null) {
             if (current.getElement().equals(key)) {
                 if (current == first) {
-                    first = current.getNext();
+                    deleteFirst();
                 } else {
                     previous.setNext(current.getNext());
+                    size--;
                 }
-                size--;
                 return key;
             }
             previous = current;
             current = current.getNext();
         }
-        size--;
         return null;
     }
 

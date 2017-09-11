@@ -38,6 +38,9 @@ public class FirstLastLinkedListTest {
         ListItem ten = new ListItem(77);
         firstLastLinkedList.insertFirst(one);
         firstLastLinkedList.insertFirst(two);
+        firstLastLinkedList.insertFirst(four);
+        firstLastLinkedList.insertFirst(nine);
+        firstLastLinkedList.insertLast(ten);
         firstLastLinkedList.insertLast(three);
         firstLastLinkedList.insertFirst(six);
         firstLastLinkedList.insertLast(eight);
@@ -46,7 +49,12 @@ public class FirstLastLinkedListTest {
         firstLastLinkedList.displayList();
         firstLastLinkedList.deleteFirst();
         firstLastLinkedList.displayList();
-        System.out.println(firstLastLinkedList.deleteByKey(five));
+        System.out.println(firstLastLinkedList.deleteByKey(four));
+        firstLastLinkedList.displayList();
         System.out.println(firstLastLinkedList.find(seven));
+        System.out.println(firstLastLinkedList.deleteByKey(five));
+        firstLastLinkedList.displayList();
+        System.out.println(firstLastLinkedList.deleteByKey(eight));
+        firstLastLinkedList.displayList();
     }
 }

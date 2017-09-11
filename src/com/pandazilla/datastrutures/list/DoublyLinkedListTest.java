@@ -58,7 +58,9 @@ public class DoublyLinkedListTest {
 
         System.out.println("---------------------------------------------------------------------------");
 
-        System.out.println(listItemDoublyLinkedList.deleteByKey(ten));
+        System.out.println(listItemDoublyLinkedList.deleteByKey(six));
+        System.out.println(listItemDoublyLinkedList.deleteByKey(five));
+        System.out.println(listItemDoublyLinkedList.deleteByKey(eight));
         listItemDoublyLinkedList.displayList();
         listItemDoublyLinkedList.displayListFromEnd();
 

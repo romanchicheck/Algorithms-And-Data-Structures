@@ -90,7 +90,7 @@ public class DoublyLinkedList<T> implements DoublyList {
         DLNode current = first;
         while (current != null) {
             if (current.getElement().equals(key)) {
-                if(current.equals(last)) {
+                if (current.equals(last)) {
                     insertLast(data);
                 } else {
                     DLNode newNode = new DLNode(data);
@@ -111,13 +111,15 @@ public class DoublyLinkedList<T> implements DoublyList {
         DLNode current = first;
         while (current != null) {
             if (current.getElement().equals(key)) {
-                if (current == first) {
-                    first = current.getNext();
+                if (current.equals(first)) {
+                    deleteFirst();
+                } else if (current.equals(last)) {
+                    deleteLast();
                 } else {
                     current.getPrev().setNext(current.getNext());
                     current.getNext().setPrev(current.getPrev());
+                    size--;
                 }
-                size--;
                 return key;
             }
             current = current.getNext();
