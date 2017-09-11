@@ -1,15 +1,16 @@
 package com.pandazilla.datastrutures.queue;
 
 import com.pandazilla.datastrutures.exceptions.QueueEmptyException;
+import com.pandazilla.datastrutures.list.FirstLastLinkedList;
 import com.pandazilla.datastrutures.list.LinkedList;
 
 public class LinkedQueue<T> implements Queue {
 
     private int size;
-    private LinkedList<T> list;
+    private FirstLastLinkedList<T> list;
 
     public LinkedQueue() {
-        this.list = new LinkedList<>();
+        this.list = new FirstLastLinkedList<>();
     }
 
     @Override
@@ -25,11 +26,11 @@ public class LinkedQueue<T> implements Queue {
     @Override
     public boolean isFull() {
         return false;
-    } //TODO implement it
+    }
 
     @Override
-    public Object front() throws QueueEmptyException { //TODO implement it
-        return null;
+    public Object front() throws QueueEmptyException {
+        return list.getFirst();
     }
 
     @Override

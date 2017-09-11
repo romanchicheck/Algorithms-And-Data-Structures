@@ -22,25 +22,11 @@ public interface List<T> {
     T getFirst();
 
     /**
-     * Get last node
-     * @return Node
-     */
-    T getLast();
-
-    /**
      * Add an item to list
      *
      * @param object
      */
     void insertFirst(T object);
-
-
-    /**
-     * Add an item to list
-     *
-     * @param object
-     */
-    void insertLast(T object);
 
     /**
      * Delete item from list
@@ -54,13 +40,13 @@ public interface List<T> {
      * @param key of item
      * @return item which was found
      */
-    T find(Node<T> key);
+    boolean find(T key);
 
     /**
      * Delete item by key
      * @param key of item
      * @return deleted item
      */
-    T deleteByKey(Node<T> key);
+    Object deleteByKey(Object key);
 
 }

@@ -48,10 +48,8 @@ public class ArrayQueue implements Queue {
         if (size() == capacity) {
             throw new QueueFullException("The queue is full!");
         }
-        System.out.print("rearBefore: " + rear+ " ");
         elements[rear] = element;
-        rear = (rear + 1) % capacity;//1 - 1, 2 - 2, 3 - 3, 4-4, 5 - 5, 6-6, 7-7, 8-8, 9-9,
-        System.out.println("rearAfter: " + rear+ " element: " + element + '\n');
+        rear = (rear + 1) % capacity;
     }
 
     @Override

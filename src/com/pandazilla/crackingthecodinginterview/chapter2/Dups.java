@@ -18,24 +18,24 @@ public class Dups {
     }
 
     public void removeDups() {
-        Node<Item> item = linkedList.getFirst();
-        while (item != null) {
-            Node<Item> current = linkedList.getFirst();
-            while (current != null) {
+        //Node<Item> item = linkedList.getFirst();
+        //while (item != null) {
+         //   Node<Item> current = linkedList.getFirst();
+           /* while (current != null) {
                 if (item != current && item.getElement().getValue() != -1
                         && item.getElement().getValue() == current.getElement().getValue()) {
                     current.getElement().setValue(-1);
                 }
                 current = current.getNext();
             }
-            item = item.getNext();
+            item = item.getNext();*/
         }
-        Node<Item> node = linkedList.getFirst();
+        /*Node<Item> node = linkedList.getFirst();
         while (node != null) {
             if (node.getElement().getValue() != -1) {
                 System.out.println("Item: " + node.getElement().getValue());
             }
             node = node.getNext();
-        }
-    }
+        }*/
+    //}
 }

@@ -1,13 +1,30 @@
 package com.pandazilla.datastrutures.list;
 
-public class LinkedList<T> implements List {
+public class FirstLastLinkedList<T> implements FLList{
 
-    private int size;
+    private int size = 0;
     private Node first;
+    private Node last;
 
-    public LinkedList() {
+    public FirstLastLinkedList() {
     }
 
+    @Override
+    public Object getLast() {
+        return last;
+    }
+
+    @Override
+    public void insertLast(Object object) {
+        Node newNode = new Node(object);
+        if (isEmpty()) {
+            first = newNode;
+        } else {
+            last.setNext(newNode);
+        }
+        last = newNode;
+        size++;
+    }
 
     @Override
     public boolean isEmpty() {
@@ -27,6 +44,9 @@ public class LinkedList<T> implements List {
     @Override
     public void insertFirst(Object object) {
         Node newNode = new Node(object);
+        if (isEmpty()) {
+            last = newNode;
+        }
         newNode.setNext(first);
         first = newNode;
         size++;
@@ -34,10 +54,13 @@ public class LinkedList<T> implements List {
 
     @Override
     public Object deleteFirst() {
-        Node removedItem = first;
+        Node temp = first;
+        if (first.getNext() == null) {
+            last = null;
+        }
         first = first.getNext();
         size--;
-        return removedItem;
+        return temp;
     }
 
     @Override
@@ -69,6 +92,7 @@ public class LinkedList<T> implements List {
             previous = current;
             current = current.getNext();
         }
+        size--;
         return null;
     }
 
