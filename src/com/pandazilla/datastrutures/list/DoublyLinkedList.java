@@ -38,7 +38,7 @@ public class DoublyLinkedList<T> implements DoublyList {
     }
 
     @Override
-    public Object getFirst() {
+    public DLNode<T> getFirst() {
         return first;
     }
 

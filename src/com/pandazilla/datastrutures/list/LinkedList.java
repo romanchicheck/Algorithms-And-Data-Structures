@@ -3,7 +3,7 @@ package com.pandazilla.datastrutures.list;
 public class LinkedList<T> implements List {
 
     private int size;
-    private Node first;
+    private Node<T> first;
 
     public LinkedList() {
     }
@@ -20,7 +20,7 @@ public class LinkedList<T> implements List {
     }
 
     @Override
-    public Object getFirst() {
+    public Node<T> getFirst() {
         return first;
     }
 
