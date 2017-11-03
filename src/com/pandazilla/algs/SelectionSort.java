@@ -3,15 +3,13 @@ package com.pandazilla.algs;
 public class SelectionSort {
 
     public static void main(String[] args) {
-        int[] array = {4, 3, 10, 0, 1, 99, -99};
+        int[] array = {7556, 2, 4, 3, 10, 0, 66, 1, 99, -99};
         selectionSort(array);
     }
 
     private static void selectionSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = i; j < array.length; j++) {
-                swap(array, j, indexOfSmallestArrayItem(array, j));
-            }
+            swap(array, i, indexOfSmallestArrayItem(array, i));
         }
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " | ");
