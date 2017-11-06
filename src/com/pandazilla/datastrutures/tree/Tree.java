@@ -1,5 +1,7 @@
 package com.pandazilla.datastrutures.tree;
 
+import java.util.Stack;
+
 public class Tree {
 
     private Node root;
@@ -210,6 +212,47 @@ public class Tree {
         postOrder(localRoot.getLeftChild());
         postOrder(localRoot.getRightChild());
         System.out.println(localRoot.getData());
+    }
+
+    public void displayTree() {
+        Stack globalStack = new Stack();
+        globalStack.push(root);
+        int levels = 32;
+        boolean isRowEmpty = false;
+        System.out.println(".....................................................");
+        while (!isRowEmpty) {
+            Stack localStack = new Stack();
+            isRowEmpty = true;
+            for (int j = 0; j < levels; j++) {
+                System.out.print(' ');
+            }
+            while (!globalStack.isEmpty()) {
+                Node temp = (Node) globalStack.pop();
+                if (temp != null) {
+                    System.out.print(temp.getKey());
+                    localStack.push(temp.getLeftChild());
+                    localStack.push(temp.getRightChild());
+                    if (temp.getLeftChild() != null || temp.getRightChild() != null) {
+                        isRowEmpty = false;
+                    }
+
+                } else {
+                    System.out.print("--");
+                    localStack.push(null);
+                    localStack.push(null);
+                }
+                for (int j = 0; j < levels * 2 - 2; j++) {
+                    System.out.print(' ');
+                }
+            }
+            System.out.println();
+            levels /= 2;
+            while (!localStack.isEmpty()) {
+                globalStack.push(localStack.pop());
+            }
+        }
+        System.out.println(".......................................................");
+
     }
 
 }
