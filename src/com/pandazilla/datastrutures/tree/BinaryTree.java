@@ -2,11 +2,11 @@ package com.pandazilla.datastrutures.tree;
 
 import java.util.Stack;
 
-public class Tree {
+public class BinaryTree {
 
     private Node root;
 
-    public Tree() {
+    public BinaryTree() {
     }
 
     public void insert(int id, double data) {
