@@ -137,6 +137,9 @@ public class DoublyLinkedList<T> implements DoublyList {
         System.out.println('\n');
     }
 
+    /**
+     * Iterate trough the linked list. In loop, change next to prev, prev to current and current to next.
+     */
     public void reverseList() {
         DLNode prev = null;
         DLNode current = first;
