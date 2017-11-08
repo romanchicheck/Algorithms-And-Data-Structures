@@ -137,6 +137,19 @@ public class DoublyLinkedList<T> implements DoublyList {
         System.out.println('\n');
     }
 
+    public void reverseList() {
+        DLNode prev = null;
+        DLNode current = first;
+        DLNode next;
+        while (current != null) {
+            next = current.getNext();
+            current.setNext(prev);
+            prev = current;
+            current = next;
+        }
+        first = prev;
+    }
+
     public void displayListFromEnd() {
         DLNode current = last;
         while (current != null) {

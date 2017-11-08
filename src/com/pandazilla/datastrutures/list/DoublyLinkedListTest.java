@@ -80,5 +80,9 @@ public class DoublyLinkedListTest {
         listItemDoublyLinkedList.displayListFromEnd();
 
         System.out.println("---------------------------------------------------------------------------");
+        listItemDoublyLinkedList.displayList();
+        listItemDoublyLinkedList.reverseList();
+        System.out.print("List after reverse operation: ");
+        listItemDoublyLinkedList.displayList();
     }
 }

@@ -161,7 +161,7 @@ public class BinaryTree {
      *
      * @param localRoot
      */
-    private void preOrder(Node localRoot) {
+    public void preOrder(Node localRoot) {
         if (localRoot == null) {
             return;
         }
@@ -184,7 +184,7 @@ public class BinaryTree {
      *
      * @param localRoot
      */
-    private void inOrder(Node localRoot) {
+    public void inOrder(Node localRoot) {
         if (localRoot == null) {
             return;
         }
@@ -205,7 +205,7 @@ public class BinaryTree {
      *
      * @param localRoot
      */
-    private void postOrder(Node localRoot) {
+    public void postOrder(Node localRoot) {
         if (localRoot == null) {
             return;
         }
