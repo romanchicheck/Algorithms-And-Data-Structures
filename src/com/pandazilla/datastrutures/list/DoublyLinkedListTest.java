@@ -81,8 +81,11 @@ public class DoublyLinkedListTest {
 
         System.out.println("---------------------------------------------------------------------------");
         listItemDoublyLinkedList.displayList();
-        listItemDoublyLinkedList.reverseList();
-        System.out.print("List after reverse operation: ");
+       // listItemDoublyLinkedList.reverseList();
+       // System.out.print("List after reverse operation: ");
+       // listItemDoublyLinkedList.displayList();
+        listItemDoublyLinkedList.reverseListRecursive(listItemDoublyLinkedList.getFirst());
+        System.out.print("List after recursive reverse operation: ");
         listItemDoublyLinkedList.displayList();
     }
 }

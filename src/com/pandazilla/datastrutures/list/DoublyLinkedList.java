@@ -141,6 +141,9 @@ public class DoublyLinkedList<T> implements DoublyList {
      * Iterate trough the linked list. In loop, change next to prev, prev to current and current to next.
      */
     public void reverseList() {
+        if (first == null || first.getNext() == null) {
+            return;
+        }
         DLNode prev = null;
         DLNode current = first;
         DLNode next;
@@ -151,6 +154,18 @@ public class DoublyLinkedList<T> implements DoublyList {
             current = next;
         }
         first = prev;
+    }
+
+    public void reverseListRecursive(DLNode head) {
+        if (head == null || head.getNext() == null) {
+            return;
+        }
+        DLNode next = head.getNext();
+        head.setNext(head.getPrev());
+        head.setPrev(next);
+        first = next;
+        reverseListRecursive(next);
+        next.setNext(head);
     }
 
     public void displayListFromEnd() {
